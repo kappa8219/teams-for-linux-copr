@@ -11,7 +11,7 @@ payload.
    from [Teams for Linux releases](https://github.com/IsmaelMartinez/teams-for-linux/releases).
 2. Update `Version`, `Release`, the `Source0` URL, the checksum in
    `teams-for-linux.spec`, and `source_url` in `.copr/Makefile`.
-3. Build from SCM in COPR for the desired x86_64 Fedora chroots.
+3. Build from SCM in COPR for Fedora 43, 44, 45, and Rawhide on x86_64.
 
 Install the resulting package with:
 
