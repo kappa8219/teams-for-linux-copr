@@ -3,7 +3,7 @@
 %global __requires_exclude_from /opt/teams-for-linux/.*
 
 Name:           teams-for-linux
-Version:        2.32.0
+Version:        2.32.1
 Release:        1%{?dist}
 Summary:        Unofficial Microsoft Teams client for Linux
 License:        GPL-3.0-or-later
@@ -29,7 +29,7 @@ Teams for Linux is an unofficial Microsoft Teams client for Linux using
 Electron. It wraps the Teams web application as a standalone desktop app.
 
 %prep
-echo "cb24e8008923465fdb6505228c3d75d2bb3c46e89412934ad48783d60ed32237  %{SOURCE0}" | sha256sum --check
+echo "5bb20cf35368aa38ebd8a1c42249d60f56e862e8df69064cf619968e96ad90b7  %{SOURCE0}" | sha256sum --check
 
 %install
 rpm2cpio %{SOURCE0} | cpio --extract --make-directories --quiet --directory %{buildroot}
@@ -48,6 +48,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/teams-for-linux.deskt
 %{_datadir}/icons/hicolor/*/apps/teams-for-linux.png
 
 %changelog
+* Fri Nov 20 2026 OK <4374115+kappa8219@users.noreply.github.com> - 2.32.1-1
+- Update to Teams for Linux 2.32.1
+
 * Mon Nov 16 2026 OK <4374115+kappa8219@users.noreply.github.com> - 2.32.0-1
 - Update to Teams for Linux 2.32.0
 
